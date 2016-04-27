@@ -19,6 +19,7 @@ with open(inFn, 'r') as f:
 
 sort = sorted(defs)
 
-print('# Definitions')
+print('# My Dictionary')
+print('## Definitions')
 for k in sort:
-    print('* {}: {}'.format(k, defs[k]))
+    print('* *{}* - {}'.format(k, defs[k]))
