@@ -21,5 +21,10 @@ sort = sorted(defs)
 
 print('# My Dictionary')
 print('## Definitions')
+curLetter = None
 for k in sort:
+    l = k[0].upper()
+    if curLetter != l:
+        curLetter = l
+        print('### {}'.format(curLetter))
     print('* *{}* - {}'.format(k, defs[k]))
