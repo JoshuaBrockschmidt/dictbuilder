@@ -20,12 +20,12 @@ with open(inFn, 'r') as f:
 sort = sorted(defs, key=str.lower)
 
 print('# My Dictionary')
-print('## Definitions')
+print('\n## Definitions')
 curLetter = None
 for k in sort:
     l = k[0].upper()
     if curLetter != l:
         curLetter = l
-        print('### {}'.format(curLetter))
+        print('\n### {}'.format(curLetter))
     word = k[0].upper() + k[1:]
     print('* *{}* - {}'.format(word, defs[k]))
