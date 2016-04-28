@@ -3,7 +3,6 @@
 """TODO:
  * more flexible sorting options
  * use -o to specify output file
- * check more explicitly for errors in JSON files
 """
 
 import json, sys
@@ -14,8 +13,8 @@ if len(sys.argv) > 1:
 with open(inFn, 'r') as f:
     try:
         defs = json.load(f)
-    except:
-        sys.exit('{} has a syntax error'.format(inFn))
+    except ValueError as e:
+        sys.exit('ValueError in {}: {}'.format(inFn, e))
 
 sort = sorted(defs, key=str.lower)
 
