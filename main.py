@@ -17,7 +17,7 @@ with open(inFn, 'r') as f:
     except:
         sys.exit('{} has a syntax error'.format(inFn))
 
-sort = sorted(defs)
+sort = sorted(defs, key=str.lower)
 
 print('# My Dictionary')
 print('## Definitions')
