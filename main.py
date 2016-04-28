@@ -27,4 +27,5 @@ for k in sort:
     if curLetter != l:
         curLetter = l
         print('### {}'.format(curLetter))
-    print('* *{}* - {}'.format(k, defs[k]))
+    word = k[0].upper() + k[1:]
+    print('* *{}* - {}'.format(word, defs[k]))
