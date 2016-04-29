@@ -2,13 +2,26 @@
 
 """TODO:
  * more flexible sorting options
- * make help
 """
 
 import getopt, json, sys
 
 def usage():
-    print("usage: TODO")#TODO
+    print("Sample Usage:")
+    print("dictbuilder -h")
+    print("OR")
+    print("dictbuilder -i <infile> -o <outfile>")
+    print()
+    print("Flags:")
+    print("-h, --help")
+    print("  Displays this help.")
+    print()
+    print("-i <infile>, --input=<infile>")
+    print("  Specify an input file. This flag can be used multiple times.")
+    print()
+    print("-o <outfile>, --output=<outfile>")
+    print("  Specify an output file.")
+    print()
 
 # Parse command-line arguments
 try:
